@@ -1,0 +1,587 @@
+/* fonts */
+.roboto() {
+	font-family: 'Roboto', sans-serif;
+}
+.century() {
+	font-family: 'Century Gothic', sans-serif;
+}
+
+/* colors */
+@white: #fff;
+@black: #000;
+@pink: #c73d87;
+@gray: #707070;
+@catalog-btn: #16335e;
+@offer-bg: #ff8c27;
+@green: #50e850;
+@bg-footer: #16335e;
+@bg-social: #3d66c7;
+/* Basic setting */
+html {
+	font-size: 10px;
+}
+h2, h3, p, ul, li, div, input, iframe  {
+	margin: 0;
+	padding: 0;
+}
+.wrapperr {
+	overflow-x: hidden !important;
+}
+body {
+	.roboto();
+	// color: @color-text;
+	overflow-x: hidden !important;
+}
+button {
+	outline: none;
+} 
+a {
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		text-decoration: none;
+	}
+}
+.fa-phone {
+	--webkit-transform: rotate(85deg);
+	-ms-transform: rotate(85deg);
+	-o-transform: rotate(85deg);
+	transform: rotate(85deg);
+}
+/* Setting */
+.btn {
+	button {
+		border: none;
+		padding: 1rem 1.5rem;
+		font-size: 1.4rem;
+		background-color: @pink;
+		color: @white;
+		box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.41);
+		-webkit-border-radius: 2rem;
+		-moz-border-radius: 2rem;
+		-ms-border-radius: 2rem;
+		-o-border-radius: 2rem;
+		border-radius: 2rem;
+		--webkit-transition: 0.8s;
+		-o-transition: 0.8s;
+		transition: 0.8s;
+		i {
+			margin-right: 1rem;
+		}
+		&:hover {
+			--webkit-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			-o-transform: scale(1.1);
+			transform: scale(1.1);
+			--webkit-transition: 0.8s;
+			-o-transition: 0.8s;
+			transition: 0.8s;
+		}
+	}
+}
+
+
+/* шапка сайта */
+.header {
+	&-logo {
+		margin-top: 2.9rem;
+		margin-bottom: 1.9rem;
+		h1 {
+			position: relative;
+			width: 10rem;
+			height: 7rem;
+			font-size: 3rem;
+			z-index: 1;
+			text-transform: uppercase;
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 10rem;
+				height: 7rem;
+				top: -0.7rem;
+				left: 0.7rem;
+				z-index: -1;
+				border: 1px solid @gray;
+			}
+			&::before {
+				content: 'Cable Land';
+				display: block;
+				position: absolute;
+				width: 10rem;
+				height: 7rem;
+				top: 0rem;
+				left: 0rem;
+				z-index: 1;
+				font-weight: 700;
+				background-color: @white;
+				color: @pink;
+				border: 1px solid @gray;
+			}
+		}
+	}
+	&-working {
+		margin-top: 4rem;
+		margin-bottom: 3.9rem;
+		p {
+			font-size: 1.2rem;
+			font-weight: 400;
+			color: @gray;
+			text-align: center;
+		}
+	}
+	&-phone {
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+		a {
+			display: block;
+			font-size: 1.6rem;
+			color: @black;
+			font-weight: 700;
+			span {
+				color: @pink;
+			}
+		}
+	}
+	&-btn {
+		margin-top: 3.5rem;
+	}
+}
+/* Навигация */
+.nav {
+	background-image: linear-gradient(180deg, #3d66c7 0%, #16335e 100%);
+	position: relative;
+	span {
+		position: absolute;
+		top: 0;
+		margin-top: -0.1rem;
+		left: 50%;
+		margin-left: -1rem;
+		width: 2rem;
+		height: 0.2rem;
+		background-color: @white;
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+			position: absolute;
+			top: 50%;
+			margin-top: -0.1rem;
+			left: 50%;
+			margin-left: -1rem;
+			width: 2rem;
+			height: 0.2rem;
+			background-color: @white;
+		}
+		&::before {
+			-webkit-transform: translateY(-0.5rem);
+			-ms-transform: translateY(-0.5rem);
+			-o-transform: translateY(-0.5rem);
+			transform: translateY(-0.5rem);
+		}
+		&::after {
+			-webkit-transform: translateY(0.5rem);
+			-ms-transform: translateY(0.5rem);
+			-o-transform: translateY(0.5rem);
+			transform: translateY(0.5rem);
+		}
+	}
+	& [type="checkbox"]{
+		display: none;
+	}
+	label {
+		margin-top: 2rem;
+		padding-bottom: 2rem;
+	}
+	ul {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		list-style: none;
+		li {
+			display: inline-block;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 1.5rem;
+			margin-right: 1.8rem;
+			font-weight: 400;
+			padding: 1.4rem;
+			a {
+				color: @white;
+			}
+			&:hover {
+				padding: 1.4rem;
+				cursor: pointer;
+				background-image: linear-gradient(180deg, #16335e 0%, #3d66c7 100%);
+				-webkit-border-radius: 2rem;
+				-moz-border-radius: 2rem;
+				-ms-border-radius: 2rem;
+				-o-border-radius: 2rem;
+				border-radius: 2rem;
+			} 
+		}
+	}
+}
+/* Фиксированное меню */
+.fixed { 
+	position:fixed;
+	top:0;
+	width: 100%;
+	z-index: 99;
+	transform: translateY(0px);
+    transition: 0.7s;
+}
+/* Слайдер */
+.slick-dots {
+	position: absolute;
+	bottom: 2.4rem;
+}
+.slick-dots li button:before {
+	font-size: 1.7rem;
+	opacity: 1;
+	color: @white;
+}
+.slick-dots li.slick-active button:before {
+	background-image: radial-gradient(undefined undefinedpx at , #16335e 0%, #22427e 73%, #3d66c7 100%);
+	opacity: 1;
+}
+.slider {
+	height: 55rem;
+}
+/* Инфо о магазине */
+.shop {
+	margin-top: 14.2rem;
+	h2 {
+		margin-bottom: 3.2rem;
+		text-align: center;
+		font-size: 4rem;
+		font-weight: 700;
+		color: @gray;
+	}
+	p {
+		color: @gray;
+		padding-bottom: 2.4rem;
+		font-size: 1.6rem;
+		font-weight: 300;
+		line-height: 2.6rem;
+	}
+}
+/* Каталог продукции */
+.catalog {
+	margin-top: 3.6rem;
+	margin-bottom: 3rem;
+	&-header {
+		h2 {
+			margin: 0 auto;
+			margin-bottom: 5rem;
+			width: 20rem;
+			height: 4.5rem;
+			padding-top: 1.5rem;
+			text-align: center;
+			font-size: 1.6rem;
+			color: @white;
+			font-weight: 300;
+			text-transform: uppercase;
+			background-image: linear-gradient(180deg, #16335e 0%, #3d66c7 100%);
+			-webkit-border-radius: 0.2rem;
+			-moz-border-radius: 0.2rem;
+			-ms-border-radius: 0.2rem;
+			-o-border-radius: 0.2rem;
+			border-radius: 0.2rem;
+		}
+	}
+	&-content {
+		background: url(../img/catalog-bg.png) left top no-repeat, linear-gradient(180deg, #3d66c7 0%, #16335e 100%);
+		padding: 3rem;
+		color: @white;
+		-webkit-border-radius: 2.7rem;
+		-moz-border-radius: 2.7rem;
+		-ms-border-radius: 2.7rem;
+		-o-border-radius: 2.7rem;
+		border-radius: 2.7rem;
+		h3 {
+			font-size: 1.7rem;
+			text-transform: uppercase;
+			font-weight: 700;
+			line-height: 2.6rem;
+			letter-spacing: 0.1px;
+			margin-bottom: 2rem;
+		}
+		ul {
+			list-style: none; 
+			li {
+				font-size: 1.3rem;
+				margin-bottom: 1rem;
+				font-weight: 400;
+			}
+		}
+		&-btn {
+			text-align: center;
+			 margin-top: 2.5rem; 
+			a {
+				background-image: linear-gradient(180deg, #ffffff 0%, #afafaf 100%);
+				padding: 1rem 3rem;
+				text-transform: uppercase;
+				color: @catalog-btn;
+				-webkit-border-radius: 2.1rem;
+				-moz-border-radius: 2.1rem;
+				-ms-border-radius: 2.1rem;
+				-o-border-radius: 2.1rem;
+				border-radius: 2.1rem;
+				i {
+					margin-right: 1rem;
+				}
+			}
+		}
+		&-two {
+			margin-top: 10rem;
+		}
+
+	}
+}
+/* Уникальное предложение */
+.offer {
+	background-color: @offer-bg;
+	text-align: center;
+	color: @white;
+	p {
+		display: inline-block;
+		font-size: 3rem;
+		font-weight: 300;
+		margin-right: 5rem;
+	}
+	&-btn {
+		display: inline-block;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		button {
+			border: none;
+			padding: 1rem 2.5rem;
+			font-size: 1.6rem;
+			background-color: @green;
+			box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.41);
+			-webkit-border-radius: 2.2rem;
+			-moz-border-radius: 2.2rem;
+			-ms-border-radius: 2.2rem;
+			-o-border-radius: 2.2rem;
+			border-radius: 2.2rem;
+			--webkit-transition: 0.8s;
+			-o-transition: 0.8s;
+			transition: 0.8s;
+			i {
+				margin-right: 0.5rem;
+				font-size: 2rem;
+				vertical-align: top;
+			}
+			&:hover {
+				--webkit-transform: scale(1.1);
+				-ms-transform: scale(1.1);
+				-o-transform: scale(1.1);
+				transform: scale(1.1);
+				--webkit-transition: 0.8s;
+				-o-transition: 0.8s;
+				transition: 0.8s;
+			}
+		}
+	}
+}
+/* Футер */
+.footer {
+	background-color: @bg-footer;
+	color: @white;
+	&-nav {
+		margin-top: 10rem;
+		margin-bottom: 10rem;
+		span {
+			display: block;
+			font-size: 1.7rem;
+			font-weight: 400;
+			padding-bottom: 1rem;
+			border-bottom: 1px solid @gray;
+		}
+		a {
+			display: block;
+			color: @white;
+			margin-top: 3rem;
+			font-size: 1.5rem;
+			font-weight: 300;
+			&:hover {
+				color: @gray;
+			}
+		}
+	}
+	&-contacts {
+		h4 {
+			font-size: 1.6rem;
+			text-transform: uppercase;
+			color: @gray;
+			font-weight: 400;
+			margin-top: 14rem;
+			margin-bottom: 1.8rem;
+		}
+		a {
+			display: block;	
+			color: @white;
+			margin-bottom: 2.2rem;
+			font-size: 1.7rem;
+			font-weight: 700;
+			i {
+				margin-right: 1rem;
+			}
+			&:hover {
+				color: @gray;
+			}
+		}
+		span {
+			font-size: 1.5rem;
+			font-weight: 700;
+			i {
+				margin-right: 1rem;
+			}
+		}
+	}
+	&-btn {
+		margin-top: 23rem;
+	}
+	&-social {
+		margin-top: 3rem;
+		text-align: right;
+		a {
+			color: @white;
+			i {
+				width: 4.8rem;
+				height: 4.8rem;
+				padding: 1rem;
+				font-size: 2.8rem;
+				text-align: center;
+				background-color: @bg-social;
+				margin-right: 1rem;
+				box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.41);
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+				border-radius: 50%;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+
+		}
+	}
+}
+
+
+@media (max-width: 470px) {
+	.btn {
+		width: 100%;
+		text-align: center;
+	}
+	.header {
+		&-logo {
+			h1 {
+				margin: 0 auto;
+			}
+		}
+		&-working {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+		&-phone {
+			text-align: center;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+		&-btn {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+	}
+	.nav {
+		span {
+			display: block;
+		}
+		label {
+			display: block;
+		}
+		ul {
+			display: none;
+		}
+	}
+	input.toggleMenu:checked ~ ul {
+		display: block;
+	}
+
+
+
+
+
+
+
+
+	.slider {
+		height: 25rem;
+		img {
+			height: 25rem;
+		}
+	}
+	.shop {
+		margin-top: 5rem;
+		h2 {
+			font-size: 2rem;
+		}
+		p {
+			font-size: 1.3rem;
+			line-height: 2;
+			padding-bottom: 1.5rem;
+		}
+	}
+	.catalog {
+		margin-top: 2rem;
+		&-content {
+			margin-bottom: 2rem;
+			&-two {
+				margin-top: 0;
+			}
+		}
+	}
+	.offer {
+		text-align: center;
+		padding-top: 1rem;
+		h4 {
+			font-size: 2.2rem;
+		}
+		&-btn {
+			margin-top: 1rem;
+		}
+	}
+	.footer {
+		&-nav {
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+			span {
+				font-size: 1.3rem;
+			}
+			a {
+				display: none;
+			}
+		}
+		&-contacts {
+			text-align: center;
+			h4 {
+				margin-top: 0;
+			}
+		}
+		&-btn {
+			margin-top: 3rem;
+		}
+		&-social {
+			text-align: center;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
